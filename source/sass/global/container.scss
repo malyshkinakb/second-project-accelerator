@@ -1,0 +1,16 @@
+.container {
+  margin: auto;
+  min-width: 320px;
+  width: 320px;
+  padding: 0 15px;
+
+  @include vp-tablet {
+    width: 768px;
+    padding: 0 45px;
+  }
+
+  @include vp-desktop {
+    width: 1440px;
+    padding: 0 120px;
+  }
+}

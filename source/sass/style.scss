@@ -1,0 +1,15 @@
+// Vendor
+// ---------------------------------
+
+@import "vendor/normalize";
+
+/* базовые стили */
+@import "./global/variables";
+@import "./global/mixins";
+@import "./global/base";
+@import "./global/fonts";
+@import "./global/container";
+
+
+/* блоки */
+@import "./blocks/title";
