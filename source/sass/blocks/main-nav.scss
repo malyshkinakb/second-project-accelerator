@@ -1,0 +1,49 @@
+.main-nav__toogle {
+  width: 26px;
+  height: 26px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 26px;
+    height: 19px;
+    mask-repeat: no-repeat;
+    background-color: $main-color-light;
+    mask-image: url("/__spritemap#sprite-menu-view");
+  }
+
+  @include vp-desktop {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  @include list-reset;
+
+  display: none;
+
+  @include vp-desktop {
+    display: flex;
+    position: absolute;
+    left: 458px;
+    top: 13px;
+    gap: 30px;
+  }
+}
+
+.main-nav__link {
+  text-decoration: none;
+  color: $main-color-light;
+  font-weight: 400;
+
+  @include vp-desktop {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
