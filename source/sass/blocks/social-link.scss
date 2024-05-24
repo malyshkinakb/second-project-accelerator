@@ -1,0 +1,63 @@
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(45, 56, 63, 0.3);
+
+  &::before {
+    content: "";
+    display: block;
+    background-color: #030a1a;
+  }
+
+  &--footer {
+    width: 31px;
+    height: 30px;
+  }
+
+  &--vk::before {
+    mask-image: url("/__spritemap#sprite-vk-view");
+    width: 14px;
+    height: 7px;
+  }
+
+  &--ok::before {
+    mask-image: url("/__spritemap#sprite-odnoklassniki-view");
+    width: 9.55px;
+    height: 15px;
+  }
+
+  &--reddit::before {
+    mask-image: url("/__spritemap#sprite-reddit-view");
+    width: 15px;
+    height: 15px;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border: 1px solid $main-color-light;
+  }
+
+  &:hover {
+    border: 1px solid $main-color;
+  }
+
+  &:active {
+    background-color: #0266c1;
+    border: 1px solid #0266c1;
+
+    &::before {
+      background-color: $main-color-light;
+    }
+  }
+
+  &:disabled {
+    border: 1px solid rgba(45, 56, 63, 0.3);
+
+    &::before {
+      background-color: rgba(45, 56, 63, 0.3);
+    }
+  }
+}

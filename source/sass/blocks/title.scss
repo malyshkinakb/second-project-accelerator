@@ -4,4 +4,123 @@
   line-height: 22px;
   font-weight: 800;
   color: $main-color;
+  z-index: 2;
+  margin: 0;
+  position: relative;
+
+  &--tours {
+    margin-bottom: 39px;
+
+    @include vp-tablet {
+      margin-bottom: 35px;
+    }
+
+    @include vp-desktop {
+      margin-bottom: 50px;
+    }
+  }
+
+  &--training {
+    margin-bottom: 35px;
+  }
+
+  &--instructors {
+    margin-bottom: 25px;
+
+    @include vp-tablet {
+      padding-top: 5px;
+      margin-bottom: 35px;
+    }
+
+    @include vp-desktop {
+      margin-bottom: 17px;
+    }
+  }
+
+  &--about {
+    margin-bottom: 42px;
+
+    @include vp-tablet {
+      margin-bottom: 46px;
+    }
+
+    @include vp-desktop {
+      margin-bottom: 57px;
+    }
+  }
+
+  &--reviews {
+    margin-bottom: 32px;
+
+    @include vp-tablet {
+      margin-bottom: 35px;
+    }
+
+    @include vp-desktop {
+      margin-bottom: 38px;
+    }
+  }
+
+  &--advantages {
+    text-align: center;
+    margin-bottom: 37px;
+
+    @include vp-tablet {
+      margin-bottom: 60px;
+    }
+
+    @include vp-desktop {
+      margin-bottom: 50px;
+    }
+  }
+
+  &--contacts {
+    margin-bottom: 29px;
+
+    @include vp-tablet {
+      margin-bottom: 20px;
+    }
+
+    @include vp-desktop {
+      margin-bottom: 25px;
+    }
+  }
+
+  @include vp-tablet {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  @include vp-desktop {
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  &::before {
+    content: attr(data-title);
+    position: absolute;
+    top: -16px;
+    display: block;
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 800;
+    opacity: 0.03;
+    z-index: -1;
+
+    @include vp-tablet {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @include vp-desktop {
+      font-size: 55px;
+      line-height: 55px;
+    }
+  }
+}
+
+.title--advantages::before {
+  left: 50%;
+  top: -30px;
+  transform: translateX(-50%);
 }

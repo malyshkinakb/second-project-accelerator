@@ -1,0 +1,47 @@
+.slide-training {
+  padding: 14px;
+  border: 1px solid rgba(2, 102, 193, 0.1);
+  background-color: $main-color-light;
+
+  @include vp-tablet {
+    min-height: 388px;
+  }
+
+  @include vp-desktop {
+    min-height: 356px;
+  }
+}
+
+.slide-training__image {
+  margin-bottom: 15px;
+
+  @include vp-tablet {
+    width: 183px;
+    height: 200px;
+  }
+
+  @include vp-desktop {
+    width: 255px;
+    height: 200px;
+  }
+}
+
+.slide-training__name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide-training__name h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.slide-training__description p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+}

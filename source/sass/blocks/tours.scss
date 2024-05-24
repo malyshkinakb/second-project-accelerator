@@ -1,0 +1,126 @@
+.tours {
+  background-image: url("../../img/bg-tours-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 10px;
+
+  @include vp-tablet {
+    background-image: url("../../img/bg-tours-tablet.png");
+    background-position: 100% -92px;
+  }
+
+  @include vp-desktop {
+    background-image: url("../../img/bg-tours-desktop.png");
+    background-position: 100% -126px;
+  }
+}
+
+.tours__container {
+  padding-top: 39px;
+  padding-bottom: 20px;
+
+  @include vp-tablet {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  @include vp-desktop {
+    padding-top: 123px;
+    padding-bottom: 100px;
+  }
+}
+
+.tours__slider-block {
+  position: relative;
+}
+
+.tours__slider {
+  margin-bottom: 25px;
+
+  @include vp-desktop {
+    margin-bottom: 53px;
+  }
+}
+
+.tours__slider-control {
+  display: none;
+
+  @include vp-tablet {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.tours__link {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.tours__link a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  color: $main-color;
+  padding: 10px;
+  letter-spacing: 0.56px;
+
+  &::after {
+    content: "";
+    mask-image: url("/__spritemap#sprite-right-view");
+    display: block;
+    background-color: $main-color;
+    width: 9px;
+    height: 14px;
+    margin-left: 13px;
+
+    @include vp-tablet {
+      margin-left: 15px;
+    }
+  }
+
+  @include vp-tablet {
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.64px;
+  }
+
+  &:focus-visible {
+    color: rgba(2, 102, 193, 1);
+
+    &::after {
+      background-color: rgba(2, 102, 193, 1);
+    }
+  }
+
+  &:hover {
+    color: rgba(2, 102, 193, 0.2);
+
+    &::after {
+      background-color: rgba(2, 102, 193, 0.2);
+    }
+  }
+
+  &:active {
+    color: #1c3374;
+
+    &::after {
+      background-color: #1c3374;
+    }
+  }
+
+  &:disabled {
+    color: #999999;
+    cursor: auto;
+    pointer-events: none;
+
+    &::after {
+      background-color: #999999;
+    }
+  }
+}

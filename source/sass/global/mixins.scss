@@ -16,6 +16,12 @@
   }
 }
 
+@mixin vp-not-desktop {
+  @media (min-width: $mobile-width) and (max-width: $tablet-width) {
+    @content;
+  }
+}
+
 @mixin vp-desktop {
   @media (min-width: $desktop-width) {
     @content;

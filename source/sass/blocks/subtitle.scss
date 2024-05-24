@@ -1,0 +1,17 @@
+.subtitle {
+  font-family: $montserrat;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 800;
+  color: $main-color;
+
+  @include vp-tablet {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @include vp-desktop {
+    font-size: 21px;
+    line-height: 21px;
+  }
+}

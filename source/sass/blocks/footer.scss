@@ -1,0 +1,158 @@
+.footer {
+  border-top: 1px solid rgba(45, 56, 63, 0.2);
+}
+
+.footer__container {
+  padding-top: 23px;
+  padding-bottom: 20px;
+
+  @include vp-tablet {
+    padding-top: 34px;
+  }
+
+  @include vp-desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  margin-bottom: 23px;
+
+  @include vp-tablet {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 34px;
+    gap: 43px;
+  }
+
+  @include vp-desktop {
+    gap: 114px;
+    margin-bottom: 22px;
+  }
+}
+
+.footer__nav {
+  margin: 0 auto;
+
+  @include vp-tablet {
+    margin: 0;
+  }
+}
+
+.footer__nav-list {
+  @include list-reset;
+
+  display: block;
+  column-count: 2;
+  column-width: 120px;
+  column-gap: 50px;
+
+  @include vp-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    column-count: 1;
+    column-width: auto;
+  }
+
+  @include vp-desktop {
+    gap: 30px;
+  }
+}
+
+.footer__nav-item {
+  text-align: center;
+  margin-bottom: 5px;
+
+  @include vp-tablet {
+    margin-bottom: 0;
+  }
+}
+
+.footer__nav-link {
+  font-size: 14px;
+  line-height: 14px;
+  padding: 5px;
+  text-decoration: none;
+  color: $main-color;
+
+  @include vp-tablet {
+    padding: 0;
+    padding-right: 3px;
+    margin-top: 3px;
+  }
+
+  @include vp-desktop {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $main-color;
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    border-bottom: 1px solid $main-color;
+  }
+
+  &:active {
+    color: #0266c1;
+  }
+
+  &[disabled] {
+    color: #999999;
+  }
+}
+
+.footer__phone {
+  display: none;
+
+  @include vp-desktop {
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    text-decoration: none;
+    color: $main-color;
+  }
+}
+
+.footer__logo {
+  margin: 0 auto;
+
+  @include vp-tablet {
+    margin: 0;
+  }
+
+  @include vp-desktop {
+    margin: 9px 29px;
+  }
+}
+
+.footer__social-list {
+  justify-content: center;
+}
+
+.footer__policy {
+  display: block;
+  font-weight: 300px;
+  font-size: 12px;
+  line-height: 12px;
+  text-decoration: none;
+  text-align: center;
+  color: $main-color;
+  margin-top: 23px;
+
+  @include vp-tablet {
+    margin-top: 34px;
+  }
+
+  @include vp-desktop {
+    margin-top: 22px;
+  }
+}

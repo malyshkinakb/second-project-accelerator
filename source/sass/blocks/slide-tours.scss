@@ -1,0 +1,186 @@
+.slide-tours {
+  position: relative;
+}
+
+.slider-tours__buttons {
+  display: none;
+
+  @include vp-tablet {
+    position: absolute;
+    top: 60px;
+    right: 45px;
+    display: flex;
+    gap: 4px;
+    z-index: 2;
+  }
+
+  @include vp-desktop {
+    top: 120px;
+    right: 120px;
+  }
+}
+
+.slide-tours__image {
+  position: relative;
+  width: 290px;
+  height: 416px;
+  display: block;
+  z-index: -1;
+
+  @include vp-tablet {
+    width: 330px;
+    height: 416px;
+  }
+
+  @include vp-desktop {
+    width: 380px;
+    height: 416px;
+  }
+}
+
+.slide-tours__content {
+  position: absolute;
+  width: 250px;
+  bottom: 25px;
+  left: 20px;
+  z-index: 1;
+  color: $main-color-light;
+
+  @include vp-tablet {
+    width: 290px;
+    bottom: 26px;
+  }
+
+  @include vp-desktop {
+    width: 340px;
+  }
+}
+
+.slide-tours__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+  margin-bottom: 31px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -15px;
+    left: 0;
+    width: 80px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  @include vp-tablet {
+    padding-right: 20px;
+  }
+
+  @include vp-desktop {
+    padding-right: 80px;
+  }
+}
+
+.slide-tours__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 15px;
+}
+
+.slide-tours__place {
+  padding: 8px 12px 8px 16px;
+  background-color: $accent-color;
+  display: flex;
+
+  &::before {
+    content: "";
+    mask-image: url("/__spritemap#sprite-place-view");
+    display: block;
+    background-color: $main-color-light;
+    width: 9px;
+    height: 12px;
+    margin-right: 9px;
+  }
+}
+
+.slide-tours__duration {
+  display: flex;
+  gap: 17px;
+}
+
+.slide-tours__duration-text {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    background-color: $main-color-light;
+  }
+
+  &--day::before {
+    mask-image: url("/__spritemap#sprite-sun-view");
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+  }
+
+  &--night::before {
+    mask-image: url("/__spritemap#sprite-moon-view");
+    width: 16px;
+    height: 16px;
+    margin-right: 14px;
+  }
+}
+
+.slide-tours__list {
+  @include list-reset;
+
+  display: grid;
+  grid-template-columns: 84px 83px 69px;
+  gap: 8px;
+
+  @include vp-tablet {
+    gap: 27px;
+  }
+
+  @include vp-desktop {
+    gap: 52px;
+  }
+
+  &--elbrus {
+    @include vp-tablet {
+      gap: 28px;
+    }
+  }
+}
+
+.slide-tours__feature {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 12px;
+  margin: 0;
+}
+
+.slide-tours__meaning {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 13px;
+  margin: 0;
+  margin-top: 7px;
+}
+
+.slide-tours__item--level {
+  @include vp-tablet {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+}
